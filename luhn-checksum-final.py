@@ -1,10 +1,15 @@
-"""The Luhn formula is a widely used system for validating identification numbers. Using
-the original number, double the value of every other digit. Then add the values of the
-individual digits together (if a doubled value now has two digits, add the digits individually).
+"""The Luhn formula is a widely used system for validating identification numbers.
+
+Using the original number, double the value of every other digit.
+Then add the values of the individual digits together (if a doubled value now has two digits,
+add the digits individually).
+
 The identification number is valid if the sum is divisible by 10.
+
 Write a program that takes an identification number of arbitrary length and
-determines whether the number is valid under the Luhn formula. The program must
-process each character before reading the next one."""
+determines whether the number is valid under the Luhn formula.
+The program must process each character before reading the next one."""
+
 
 def double_digit_value(digit: int):
     doubled_digit = digit * 2
@@ -21,13 +26,6 @@ for i in range(10):
         positive_count += 1
     elif number < 0:
         negative_count += 1
-
-inp = input('Do you want the (p)ositive or (n)egative count? ').lower()
-if inp == 'p':
-    print(f'Positive count is {positive_count}.')
-elif inp == 'n':
-    print(f'Negative count is {negative_count}.')
-# now move one back to our problem:
 
 print('Enter a number (stop by pressing enter): ')
 odd_length_checksum = 0
